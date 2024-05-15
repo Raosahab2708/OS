@@ -1,0 +1,870 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--commands:
+basic:
+•	date --date="2 year ago" : Display the date and time from two years ago
+•	date --date="next wed" : Display the date and time of the next Wednesday
+•	date "+%d" : Display the day of the month
+•	date "+%D" : Display the date in MM/DD/YY format
+•	date "+%S" : Display the seconds of the current time
+•	date "+%M" : Display the minutes of the current time
+•	date "+" : Display the current date and time (default format)
+•	date "+%T" : Display the current time in HH:MM:SS format
+
+•	who : Display information about currently logged-in users
+•	man who : Display the manual page for the 'who' command
+•	who -T-H : Display user information with headers
+•	who -p -H : Display user information with process details
+•	who -u : Display user information with idle time
+•	who -b -H : Display information about system boot
+•	who -d-H : Display user information with idle and exit details
+•	whoami : Display the current username
+
+•	echo "Hello \bthis \bis \buser" : Display a string with backspace characters
+•	echo -e "Hello \bthis \bis \buser" : Display a string with interpreted backspace characters
+•	echo "Hello this is user" : Display a simple string
+•	echo -e "Hello \bthis \bts \buser" : Display a string with interpreted backspace characters
+•	echo -e "Hello this is \cuser" : Display a string with suppressed newline character
+•	echo -e "Hello \nthis \nis \nuser" : Display a string with newline characters
+•	echo -e "Hello \tthis \tis \tuser" : Display a string with tab characters
+•	echo -e "Hello \rthis is user" : Display a string with carriage return
+•	echo -e "Hello \vthis \vis \vuser" : Display a string with vertical tab characters
+•	echo "12+58" | bc : Perform arithmetic operation using 'bc' command
+
+•	echo "var = 10; var" | bc : Set variable and display its value
+•	echo "var = 10; var^=2; var" | bc : Set variable, bitwise XOR, and display its value
+•	echo "var = 10; var++" | bc : Set variable, increment, and display its value
+•	echo "var = 18; ++var" | bc : Set variable, increment, and display its value
+•	echo "var = 10; --var" | bc : Set variable, decrement, and display its value
+•	echo "var = 10; var--" | bc : Set variable, display its value, then decrement
+•	echo "1==2" | bc : Perform a comparison operation
+
+
+•	mkdir newdr : Create a new directory named 'newdr'
+•	cd newdr : Change the current directory to 'newdr'
+•	touch file.txt : Create an empty file named 'file.txt'
+•	nano file.txt : Open the 'file.txt' file for editing using the nano text editor
+•	cat file.txt : Display the contents of the 'file.txt' file
+•	touch file1.txt : Create an empty file named 'file1.txt'
+•	cp file.txt file1.txt : Copy the contents of 'file.txt' to 'file1.txt'
+•	mv file.txt file2.txt : Move 'file.txt' to 'file2.txt'
+•	cat file2.txt : Display the contents of 'file2.txt'
+•	cat file1.txt file2.txt : Concatenate the contents of 'file1.txt' and 'file2.txt'
+•	comm file1.txt file2.txt : Compare two sorted files line by line
+•	gzip file1.txt : Compress 'file1.txt' using gzip
+•	gunzip file1.txt : Decompress 'file1.txt' using gunzip
+•	ls : List files and directories in the current directory
+
+•	touch a file1.txt : Create empty files 'a' and 'file1.txt'
+•	touch -c -d "16 Dec" file1.txt : Change the access and modification times of 'file1.txt'
+
+•	cp - newdr/newdr1/ : Copy the current directory into 'newdr1'
+•	cd home : Change the current directory to 'home' (not found)
+•	cat file1.txt : Display the contents of 'file1.txt'
+•	cat file1.txt file2.txt : Concatenate the contents of 'file1.txt' and 'file2.txt'
+•	cat -n file1.txt : Display the contents of 'file1.txt' with line numbers
+•	cat > file3.txt : Create a new file 'file3.txt' and enter text (use Ctrl+D to save)
+
+•	cat file1.txt | tail : Display the last lines of 'file1.txt'
+•	diff file1.txt file2.txt : Compare two files line by line
+•	ln file1.txt file2.txt : Create a hard link between 'file1.txt' and 'file2.txt'
+•	wc -c file1.txt : Display the number of bytes in 'file1.txt'
+•	wc -m file1.txt : Display the number of characters in 'file1.txt'
+
+•	wc -l file1.txt : Display the number of lines in 'file1.txt'
+•	wc -L file1.txt : Display the length of the longest line in 'file1.txt'
+
+•	ls -a filei.txt : List all files, including hidden ones, and display 'filei.txt'
+•	ls A file1.txt : List files with the name 'A' and 'file1.txt'
+•	ls -author file1.txt : List files with author information and display 'file1.txt'
+
+
+advanced:
+•	date : Display the current date and time
+•	wc -l /etc/passwd : Count and display the number of lines in the /etc/passwd file
+•	who : Display information about currently logged-in users
+•	cat mydate : Display the contents of the 'mydate' file
+•	man date > mydate : Redirect the manual page for 'date' into the 'mydate' file
+
+
+•	mv mydate mydir/ : Move the 'mydate' file to the 'mydir' directory
+•	cp mydate ourdate : Copy the 'mydate' file to a new file named 'ourdate'
+•	ls mydir : List the contents of the 'mydir' directory
+•	ls : List files and directories in the current directory
+•	pwd : Print the current working directory
+•	mv mydir/* ~/ : Move all files from 'mydir' to the home directory
+•	head -n 5 mydate : Display the first 5 lines of the 'mydate' file
+•	tail -n 5 mydate : Display the last 5 lines of the 'mydate' file
+•	rmdir mydir : Remove the 'mydir' directory (if it's empty)
+•	ls -l > list : List files and directories in long format and redirect the output to a file named 'list'
+•	touch capitals1 capitals2 capitals3 : Create empty files named 'capitals1', 'capitals2', and 'capitals3'
+•	cat capitals1 capitals2 capitals3 > capitals : Concatenate the contents of the three files into a new file named 'capitals'
+•	cat capitals2 >> capitals : Append the contents of 'capitals2' to the 'capitals' file
+•	wc -l < capitals : Count and display the number of lines in the 'capitals' file
+•	chmod a+rw capitals : Add read and write permissions for all users to the 'capitals' file
+•	chmod u-w capitals : Remove write permission for the owner of the 'capitals' file
+•	alias concat_capitals='cat capitals1 capitals2 capitals3 > capitals' : Create an alias named 'concat_capitals' for concatenating the three files
+
+
+•	grep -o -i 'the' mydate | wc -l : Count and display the number of occurrences of the word 'the' (case-insensitive) in the 'mydate' file
+•	grep -n 'date' mydate : Display lines containing the word 'date' in the 'mydate' file, along with line numbers
+•	grep -v 'i' mydate : Display lines in the 'mydate' file that do not contain the letter 'i'
+
+
+
+
+shell:
+factorial:
+#shell script for factorial of a number
+#factorial using while loop
+
+echo "Enter a number"
+read num
+
+fact=1
+
+while [ $num -gt 1 ]
+do
+  fact=$((fact * num))  #fact = fact * num
+  num=$((num - 1))      #num = num - 1
+done
+
+echo $fact
+
+
+prime:
+#!/bin/bash
+
+echo "Enter a number:"
+read num
+
+is_prime=true
+if ((num <= 1)); then
+    is_prime=false
+fi
+
+for ((i = 2; i <= num / 2; i++)); do
+    if ((num % i == 0)); then
+        is_prime=false
+        break
+    fi
+done
+
+if $is_prime; then
+    echo "$num is a prime number"
+else
+    echo "$num is not a prime number"
+fi
+
+
+palindrome:
+
+#!/bin/bash
+
+echo "Enter a number: "
+read number
+
+reverse=0
+original=$number
+
+while [ $number -ne 0 ]
+do
+    remainder=$(( $number % 10 ))
+    reverse=$(( $reverse * 10 + $remainder ))
+    number=$(( $number / 10 ))
+done
+
+if [ $original -eq $reverse ]
+then
+    echo "$original is a palindrome."
+else
+    echo "$original is not a palindrome."
+fi
+
+
+
+--reader-writer:
+import threading
+import time
+
+file_name = "shared_file.txt"
+file_mutex = threading.Lock()
+readers_count = 0
+writing = False
+readers_wait = threading.Condition(file_mutex)
+writers_wait = threading.Condition(file_mutex)
+initial_content = "Initial content written by the first writer\n"
+
+def initialize_file():
+    with open(file_name, 'w') as file:
+        file.write(initial_content)
+
+def read_from_file(reader_id):
+    global readers_count
+    with readers_wait:
+        while writing:
+            readers_wait.wait()
+        readers_count += 1
+    with open(file_name, 'r') as file:
+        content = file.read()
+        print(f"Reader {reader_id} reads:", content)
+        print("\n")
+    with readers_wait:
+        readers_count -= 1
+        if readers_count == 0:
+            writers_wait.notify()
+
+def write_to_file(writer_id):
+    global writing
+    with writers_wait:
+        while readers_count > 0 or writing:
+            writers_wait.wait()
+        writing = True
+    print(f"Writer{writer_id} is writing data to the file...")
+    with open(file_name, 'a') as file:
+        file.write(f"Data written by writer{writer_id}\n")
+    with writers_wait:
+        writing = False
+        readers_wait.notify_all()
+
+def main():
+    initialize_file()
+
+    # Test
+    threads = []
+    threads.append(threading.Thread(target=lambda: write_to_file(1)))
+    threads.append(threading.Thread(target=lambda: read_from_file(1)))
+    threads.append(threading.Thread(target=lambda: write_to_file(2)))
+    threads.append(threading.Thread(target=lambda: read_from_file(2)))
+    threads.append(threading.Thread(target=lambda: read_from_file(3)))
+
+    for thread in threads:
+        thread.start()
+        time.sleep(0.7)
+
+    for thread in threads:
+        thread.join()
+
+if __name__ == "__main__":
+    main()
+
+--system calls:
+import os
+import multiprocessing
+
+def child_process():
+    print("Child process running with PID:", os.getpid())
+    print("Child process ended.")
+
+if __name__ == "__main__":
+    print("Parent process started with PID:", os.getpid()) 
+    parent_process = multiprocessing.Process(target=child_process)
+    parent_process.start()
+    parent_process.join()
+    print("Parent process ended.")
+
+    file_path = "example.txt"
+    with open(file_path, "w") as file:
+        file.write("Hello, World!")
+
+    with open(file_path, "r") as file:
+        data = file.read()
+        print("Read from file:", data)
+        file.close()  
+
+    try:
+        os.chmod(file_path, 0o666)
+        file_mode = os.stat(file_path).st_mode & 0o777 
+        print("File mode after changing:", oct(file_mode))
+    except Exception as e:
+        print("Error occurred while changing file mode:", e)
+
+
+--producer-consumer:
+import threading
+import time
+import random
+
+
+buffer = []  
+buffer_size = 5  
+mutex = threading.Semaphore()  
+full = threading.Semaphore()  
+empty = threading.Semaphore(buffer_size) 
+
+MAX_ITERATIONS = 20  
+
+def producer():
+    while True:
+        item = random.randint(1, 108)
+        empty.acquire()
+        mutex.acquire()
+        while len(buffer) == buffer_size:
+            print("Buffer is full. Producer is waiting.")
+            mutex.release() 
+            time.sleep(1) 
+            mutex.acquire()  
+        buffer.append(item)
+        print(f"Produced {item}. Buffer: {buffer}")
+        mutex.release()
+        full.release()
+        time.sleep(random.uniform(0.1, 0.5)) 
+
+def consumer():
+    for _ in range(MAX_ITERATIONS):
+        mutex.acquire()
+        if len(buffer) == 0:
+            print("Buffer is empty. Consumer is waiting.")
+            mutex.release()  
+            time.sleep(1)  
+        else:
+            item = buffer.pop(0)
+            print(f"Consumed {item}. Buffer: {buffer}")
+            mutex.release()
+            empty.release()
+        time.sleep(random.uniform(0.1, 0.5))  
+
+
+producer_thread = threading.Thread(target=producer)
+consumer_thread = threading.Thread(target=consumer)
+
+
+producer_thread.start()
+consumer_thread.start()
+
+
+producer_thread.join()
+consumer_thread.join()
+
+
+
+
+--Bankers:
+def is_safe_state(available, maximum, allocation):
+    processes = len(allocation)
+    resources = len(available)
+
+    work = available[:]
+    finish = [False] * processes
+
+    need = [[maximum[i][j] - allocation[i][j] for j in range(resources)] for i in range(processes)]
+
+    safe_sequence = []
+
+    while True:
+        found = False
+        for i in range(processes):
+            if not finish[i]:
+                if all(need[i][j] <= work[j] for j in range(resources)):
+                    found = True
+                    finish[i] = True
+                    for j in range(resources):
+                        work[j] += allocation[i][j]
+                    safe_sequence.append(i)
+                    break
+
+        if not found:
+            break
+
+    return all(finish), safe_sequence
+
+
+def main():
+    processes = int(input("Enter the number of processes: "))
+    print("Number of Processes are:",processes)
+    resources = int(input("Enter the number of resources: "))
+    print("Number of Resources are:",resources)
+
+
+    available = [int(x) for x in input("Enter the available resources separated by space: ").split()]
+    print("Available resources:", available)
+
+    maximum = []
+    print("Enter the maximum resource allocation for each process (separated by space for each process):")
+    for i in range(processes):
+        max_resources = [int(x) for x in input().split()]
+        maximum.append(max_resources)
+        print("Maximum allocation for process", i + 1, ":", max_resources)
+
+    allocation = []
+    print("Enter the current resource allocation for each process (separated by space for each process):")
+    for i in range(processes):
+        allocation.append([int(x) for x in input().split()])
+        print("Current resource allocation for Process", i + 1, ":", allocation[i])
+
+    safe, sequence = is_safe_state(available, maximum, allocation)
+    if safe:
+        print("The system is in a safe state.")
+        print("Safe sequence:", sequence)
+    else:
+        print("The system is not in a safe state.")
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+def main():
+    processes = int(input("Enter the number of processes: "))
+    print("Number of Processes are:",processes)
+    resources = int(input("Enter the number of resources: "))
+    print("Number of Resources are:",resources)
+
+
+    available = [int(x) for x in input("Enter the available resources separated by space: ").split()]
+    print("Available resources:", available)
+
+    maximum = []
+    print("Enter the maximum resource allocation for each process (separated by space for each process):")
+    for i in range(processes):
+        max_resources = [int(x) for x in input().split()]
+        maximum.append(max_resources)
+        print("Maximum allocation for process", i + 1, ":", max_resources)
+
+    allocation = []
+    print("Enter the current resource allocation for each process (separated by space for each process):")
+    for i in range(processes):
+        allocation.append([int(x) for x in input().split()])
+        print("Current resource allocation for Process", i + 1, ":", allocation[i])
+
+    safe, sequence = is_safe_state(available, maximum, allocation)
+    if safe:
+        print("The system is in a safe state.")
+        print("Safe sequence:", sequence)
+    else:
+        print("The system is not in a safe state.")
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+--scheduling:
+class Process:
+    def __init__(self, pid, arrival_time, burst_time, priority):
+        self.pid = pid
+        self.arrival_time = arrival_time
+        self.burst_time = burst_time
+        self.remaining_time = burst_time
+        self.priority = priority
+
+
+def fcfs(processes):
+    processes.sort(key=lambda x: x.arrival_time)
+    current_time = 0
+    waiting_time = 0
+    sequence = [] 
+    for process in processes:
+        waiting_time += max(0, current_time - process.arrival_time)
+        current_time += process.burst_time
+        sequence.append(process.pid)
+    average_waiting_time = waiting_time / len(processes)
+    print("Sequence of processes:", sequence)
+    return average_waiting_time
+
+
+def sjf(processes):
+    processes.sort(key=lambda x: (x.arrival_time, x.burst_time))
+    current_time = 0
+    waiting_time = 0
+    sequence = [] 
+    for process in processes:
+        waiting_time += max(0, current_time - process.arrival_time)
+        current_time += process.burst_time
+        sequence.append(process.pid)
+    average_waiting_time = waiting_time / len(processes)
+    print("Sequence of processes:", sequence)
+    return average_waiting_time
+
+
+def round_robin(processes, time_quantum):
+    queue = []
+    current_time = 0
+    waiting_time = 0
+    sequence = [] 
+    remaining_processes = processes[:]
+    while remaining_processes or queue:
+        for process in remaining_processes[:]:
+            if process.arrival_time <= current_time:
+                queue.append(process)
+                remaining_processes.remove(process)
+        if queue:
+            current_process = queue.pop(0)
+            waiting_time += current_time - current_process.arrival_time
+            if current_process.remaining_time <= time_quantum:
+                current_time += current_process.remaining_time
+                current_process.remaining_time = 0
+            else:
+                current_time += time_quantum
+                current_process.remaining_time -= time_quantum
+                queue.append(current_process)
+            sequence.append(current_process.pid)
+    average_waiting_time = waiting_time / len(processes)
+    print("Sequence of processes:", sequence)
+    return average_waiting_time
+
+
+def priority_scheduling(processes, preemptive=False):
+    processes.sort(key=lambda x: (x.arrival_time, x.priority))
+    current_time = 0
+    waiting_time = 0
+    sequence = [] 
+    remaining_processes = processes[:]
+    while remaining_processes:
+        ready_processes = [process for process in remaining_processes if process.arrival_time <= current_time]
+        if ready_processes:
+            if preemptive:
+                current_process = min(ready_processes, key=lambda x: x.priority)
+                if current_process.remaining_time <= 0:
+                    remaining_processes.remove(current_process)
+                    waiting_time += max(0, current_time - current_process.arrival_time)
+                    current_time += current_process.burst_time
+                    sequence.append(current_process.pid)
+                else:
+                    current_time += 1
+                    current_process.remaining_time -= 1
+                    sequence.append(current_process.pid)
+            else:
+                current_process = min(ready_processes, key=lambda x: x.priority)
+                remaining_processes.remove(current_process)
+                waiting_time += max(0, current_time - current_process.arrival_time)
+                current_time += current_process.burst_time
+                sequence.append(current_process.pid)
+        else:
+            current_time += 1 
+    average_waiting_time = waiting_time / len(processes)
+    print("Sequence of processes:", sequence)
+    return average_waiting_time
+
+def main():
+    processes = []
+    num_processes = int(input("Enter the number of processes: "))
+    print("Total number of processes: ", num_processes)
+    for i in range(num_processes):
+        pid = i + 1
+        arrival_time = int(input(f"Enter arrival time for process {pid}: "))
+        burst_time = int(input(f"Enter burst time for process {pid}: "))
+        processes.append(Process(pid, arrival_time, burst_time, None))  
+
+    while True:
+        print("\nSelect a scheduling algorithm:")
+        print("1. Shortest Job First (SJF)")
+        print("2. First Come First Serve (FCFS)")
+        print("3. Round Robin (RR)")
+        print("4. Priority Scheduling (Preemptive)")
+        print("5. Priority Scheduling (Non-preemptive)")
+        print("6. Exit")
+
+        choice = int(input("Enter your choice: "))
+
+        if choice in range(1, 6):
+            print("\nEntered input:")
+            for process in processes:
+                print(f"Process {process.pid}: Arrival Time = {process.arrival_time}, Burst Time = {process.burst_time}")
+                if choice in [4, 5]:  # Prompt for priority only for priority scheduling
+                    process.priority = int(input(f"Enter priority for process {process.pid}: "))
+
+        if choice == 1:
+            print("\nAverage waiting time (SJF):", sjf(processes))
+        elif choice == 2:
+            print("\nAverage waiting time (FCFS):", fcfs(processes))
+        elif choice == 3:
+            time_quantum = int(input("Enter time quantum for Round Robin: "))
+            print("\nAverage waiting time (RR):", round_robin(processes, time_quantum))
+        elif choice == 4:
+            print("\nAverage waiting time (Priority, Preemptive):", priority_scheduling(processes, True))
+        elif choice == 5:
+            print("\nAverage waiting time (Priority, Non-preemptive):", priority_scheduling(processes, False))
+        elif choice == 6:
+            break
+        else:
+            print("\nInvalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+--page replacement:
+
+class PageReplacementAlgorithm:
+    def __init__(self, sequence, frame_size):
+        self.sequence = sequence
+        self.frame_size = frame_size
+        self.page_faults = 0
+        self.page_table = {}
+
+    def run_algorithm(self):
+        pass
+
+
+class LRU(PageReplacementAlgorithm):
+    def run_algorithm(self):
+        frame = []
+        page_faults = 0
+
+        for index, page in enumerate(self.sequence):
+            hit_or_miss = "Hit" if page in frame else "Miss"
+            if page not in frame:
+                page_faults += 1
+                if len(frame) < self.frame_size:
+                    frame.append(page)
+                else:
+                    least_recently_used = min(frame, key=frame.index)
+                    frame.remove(least_recently_used)
+                    frame.append(page)
+            else:
+                frame.remove(page)
+                frame.append(page)
+
+            print(f"Page {page}: {hit_or_miss}, Current Frame: {frame}")
+
+        self.page_faults = page_faults
+
+
+class FIFO(PageReplacementAlgorithm):
+    def run_algorithm(self):
+        frame = []
+        page_faults = 0
+
+        for index, page in enumerate(self.sequence):
+            hit_or_miss = "Hit" if page in frame else "Miss"
+            if page not in frame:
+                page_faults += 1
+                if len(frame) < self.frame_size:
+                    frame.append(page)
+                else:
+                    frame.pop(0)
+                    frame.append(page)
+
+            print(f"Page {page}: {hit_or_miss}, Current Frame: {frame}")
+
+        self.page_faults = page_faults
+
+
+class Optimal(PageReplacementAlgorithm):
+    def run_algorithm(self):
+        frame = []
+        page_faults = 0
+
+        for index, page in enumerate(self.sequence):
+            hit_or_miss = "Hit" if page in frame else "Miss"
+            if page not in frame:
+                page_faults += 1
+                if len(frame) < self.frame_size:
+                    frame.append(page)
+                else:
+                    future_occurrences = {p: self.next_occurrence(index, p) for p in frame}
+                    page_to_remove = max(future_occurrences, key=future_occurrences.get)
+                    frame[frame.index(page_to_remove)] = page
+
+            print(f"Page {page}: {hit_or_miss}, Current Frame: {frame}")
+
+        self.page_faults = page_faults
+
+    def next_occurrence(self, index, page):
+        try:
+            return self.sequence[index:].index(page)
+        except ValueError:
+            return float('inf')
+
+
+class MRU(PageReplacementAlgorithm):
+    def run_algorithm(self):
+        frame = []
+        page_faults = 0
+
+        for index, page in enumerate(self.sequence):
+            hit_or_miss = "Hit" if page in frame else "Miss"
+            if page not in frame:
+                page_faults += 1
+                if len(frame) < self.frame_size:
+                    frame.append(page)
+                else:
+                    most_recently_used = max(frame, key=frame.index)
+                    frame.remove(most_recently_used)
+                    frame.append(page)
+            else:
+                frame.remove(page)
+                frame.append(page)
+
+            print(f"Page {page}: {hit_or_miss}, Current Frame: {frame}")
+
+        self.page_faults = page_faults
+
+
+# Take user input
+sequence = input("Enter the sequence of page references (e.g., 1 2 3 4): ").split()
+sequence = [int(page) for page in sequence]
+frame_size = int(input("Enter the size of the page frame: "))
+
+# Run algorithms
+lru = LRU(sequence, frame_size)
+print("\nLRU Algorithm:")
+lru.run_algorithm()
+print("\nLRU Page Faults:", lru.page_faults)
+
+fifo = FIFO(sequence, frame_size)
+print("\nFIFO Algorithm:")
+fifo.run_algorithm()
+print("\nFIFO Page Faults:", fifo.page_faults)
+
+optimal = Optimal(sequence, frame_size)
+print("\nOptimal Algorithm:")
+optimal.run_algorithm()
+print("\nOptimal Page Faults:", optimal.page_faults)
+
+mru = MRU(sequence, frame_size)
+print("\nMRU Algorithm:")
+mru.run_algorithm()
+print("\nMRU Page Faults:", mru.page_faults)
+
+
+--disc scheduling:
+# FCFS (First-Come, First-Served)
+def fcfs(arr, head):
+    seek_sequence = [head]
+    for i in range(len(arr)):
+        seek_sequence.append(arr[i])
+    return seek_sequence
+
+# SSTF (Shortest Seek Time First)
+def sstf(arr, head):
+    seek_sequence = []
+    while len(arr) > 0:
+        nearest = min(arr, key=lambda x: abs(x - head))
+        seek_sequence.append(nearest)
+        arr.remove(nearest)
+        head = nearest
+    return seek_sequence
+
+# SCAN
+def scan(arr, head):
+    seek_sequence = []
+    upper = [x for x in arr if x >= head]
+    lower = [x for x in arr if x < head]
+    upper.sort()
+    lower.sort(reverse=True)
+    seek_sequence.append(head)
+    if len(upper) > 0:
+        seek_sequence += upper
+    if len(lower) > 0:
+        seek_sequence += lower
+    return seek_sequence
+
+# C-SCAN (Circular SCAN)
+def cscan(arr, head):
+    seek_sequence = []
+    upper = [x for x in arr if x >= head]
+    lower = [x for x in arr if x < head]
+    upper.sort()
+    lower.sort()
+    seek_sequence.append(head)
+    if len(upper) > 0:
+        seek_sequence += upper
+    if len(lower) > 0:
+        seek_sequence += lower
+    return seek_sequence
+
+# LOOK
+def look(arr, head):
+    seek_sequence = []
+    upper = [x for x in arr if x >= head]
+    lower = [x for x in arr if x < head]
+    upper.sort()
+    lower.sort(reverse=True)
+    seek_sequence.append(head)
+    if len(upper) > 0:
+        seek_sequence += upper
+    if len(lower) > 0:
+        seek_sequence += lower
+    return seek_sequence
+
+# C-LOOK (Circular LOOK)
+def clook(arr, head):
+    seek_sequence = []
+    upper = [x for x in arr if x >= head]
+    lower = [x for x in arr if x < head]
+    upper.sort()
+    lower.sort()
+    seek_sequence.append(head)
+    if len(upper) > 0:
+        seek_sequence += upper
+    if len(lower) > 0:
+        seek_sequence += lower
+    return seek_sequence
+
+# Take user input for disk requests array
+def get_disk_requests():
+    arr = []
+    while True:
+        request = input("Enter disk request (or 'done' to finish): ")
+        if request.lower() == 'done':
+            break
+        try:
+            request = int(request)
+            arr.append(request)
+        except ValueError:
+            print("Invalid input! Please enter an integer or 'done' to finish.")
+    return arr
+
+# Take user input for initial head position
+def get_initial_head():
+    while True:
+        head = input("Enter initial head position: ")
+        try:
+            head = int(head)
+            return head
+        except ValueError:
+            print("Invalid input! Please enter an integer.")
+
+# Test
+arr = get_disk_requests()
+head = get_initial_head()
+
+print("Disk Requests:", arr)
+print("Initial Head Position:", head)
+
+print("\nFCFS:", fcfs(arr.copy(), head))
+print("SSTF:", sstf(arr.copy(), head))
+print("SCAN:", scan(arr.copy(), head))
+print("C-SCAN:", cscan(arr.copy(), head))
+print("LOOK:", look(arr.copy(), head))
+print("C-LOOK:", clook(arr.copy(), head))
